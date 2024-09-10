@@ -1,0 +1,11 @@
+#Search-pokedex{
+    width: 600px;
+    margin: 0px auto;
+    padding: 1.3rem;
+    border: 1px solid black;
+    outline: none;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
