@@ -6,9 +6,9 @@ function PokemonList() {
     const [pokedexUrl, setPokedexUrl] = useState('https://pokeapi.co/api/v2/pokemon');
     const [pokemonList, setPokemonList] = useState(0)
     const [isLoading, setIsLoading] = useState(true)
-
     const [nextUrl, setNextUrl] = useState('')
     const [prevUrl, setPrevUrl] = useState('')
+
 
     async function downloadPokemons() {
         setIsLoading(true)
@@ -49,7 +49,7 @@ function PokemonList() {
 
     return (
         <div className="pokemonList-wrapper">
-                {(isLoading) ? <p>Loading...</p> : pokemonList.map((pokemon) => <Pokemon name={pokemon.name} image={pokemon.image} key={pokemon.id} />)}
+                {(isLoading) ? <p>Loading...</p> : pokemonList.map((pokemon) => <Pokemon name={pokemon.name} image={pokemon.image} key={pokemon.id} id={pokemon.id}/>)}
 
             <div className="controlls">
                 <button disabled={prevUrl == null} onClick={() => setPokedexUrl(prevUrl)}>Prev</button>
